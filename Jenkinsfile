@@ -6,7 +6,7 @@ stage('Compile-Package'){
 sh'mvn package'
 }
   stage('Deploy to Tomcat'){
-    sh 'cp  StrictHostKeyChecking=no target/*.war /soft/apache-tomcat-7.0.92/webapps/'
+    sh 'cp target/*.war /soft/apache-tomcat-7.0.92/webapps/'
   }
 }
 
